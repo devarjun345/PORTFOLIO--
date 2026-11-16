@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devarjun Bhardwaj | Full Stack Developer &amp; Community Builder</title>
+  <meta name="description" content="Devarjun Bhardwaj (Dev): B.Tech CSE student, full stack developer, Microsoft Learn Student Ambassador and Founder &amp; President of the GeeksforGeeks Student Chapter. Technophilia 2k26 winner.">
+  <meta name="theme-color" content="#05070d">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Devarjun Bhardwaj | Full Stack Developer &amp; Community Builder">
+  <meta property="og:description" content="Learn by building. Then help others build.">
+  <meta property="og:site_name" content="Devarjun Bhardwaj">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Devarjun Bhardwaj | Full Stack Developer &amp; Community Builder">
+  <meta name="twitter:description" content="Learn by building. Then help others build.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Devarjun Bhardwaj","alternateName":"Dev","jobTitle":"Full Stack Developer and Community Builder","homeLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Meerut","addressCountry":"IN"}},"knowsAbout":["Full stack development","Cloud computing","DevOps","Generative AI","Application security"],"sameAs":["https://github.com/devarjun345","https://www.linkedin.com/in/devarjun-bhardwaj-41b677373"]}</script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body id="top">
+  <div class="intro" id="intro" aria-hidden="true"><span class="curtain top"></span><span class="curtain bottom"></span><span class="flash"></span></div>
+  <canvas id="atmosphere" class="atmosphere" aria-hidden="true"></canvas>
+  <canvas id="embers" class="embers" aria-hidden="true"></canvas>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner nav-container">
+      <a class="brand" href="#top" aria-label="Devarjun Bhardwaj, back to top">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="16" cy="16" rx="14" ry="7"/><ellipse cx="16" cy="16" rx="6.5" ry="2.6"/><path d="M2 16c0 5 6 9 14 9s14-4 14-9" stroke-opacity=".5"/></g><circle cx="16" cy="16" r="2.2" fill="var(--ion)"/></svg>
+        <span class="brand-name">Devarjun</span>
+      </a>
+      <nav class="site-nav" id="nav-links" aria-label="Primary">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#leadership">Leadership</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#stack">Stack</a>
+        <a class="nav-link" href="#achievements">Achievements</a>
+        <a class="nav-link" href="#certifications">Certificates</a>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" id="palette-open" hidden aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K" aria-label="Open command palette" title="Command palette"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21 21-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <a class="btn btn-solid btn-sm" href="#contact">Get in touch</a>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu"><span class="nav-toggle-bar" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-kicker rise">Full stack &middot; Cloud &amp; DevOps &middot; AI &middot; Community builder</p>
+          <h1 id="hero-title" class="hero-name"><span class="name-line" data-split>Devarjun</span> <span class="name-line" data-split>Bhardwaj</span></h1>
+          <p class="hero-tag rise" data-typing="Learn by building. Then help others build."><span class="prompt" aria-hidden="true">~/dev $</span><span id="typed">Learn by building. Then help others build.</span><span class="caret" aria-hidden="true"></span></p>
+          <p class="hero-lead rise">From Meerut, building AI-powered, scalable software and helping student developers across India ship their ideas.</p>
+          <ul class="hero-roles rise">
+            <li>Founder &amp; President, GeeksforGeeks Student Chapter</li>
+            <li>Microsoft Learn Student Ambassador</li>
+            <li>Founder, Akatsuki Tech Clan</li>
+            <li>Winner, Technophilia 2k26 &middot; 5&times; hackathon finalist</li>
+          </ul>
+          <div class="hero-actions rise">
+            <a class="btn btn-solid" href="#projects">View projects</a>
+            <a class="btn btn-outline" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <aside class="now-strip" aria-label="What Dev is doing now">
+          <p><strong>Building</strong> DevRank, an AI career intelligence platform <span class="now-tag">in development</span></p>
+          <p><strong>Learning</strong> Microsoft Azure, AWS and Docker</p>
+          <p id="now-github" hidden><strong>On GitHub</strong> <span id="gh-repos">&ndash;</span> repos &middot; <span id="gh-followers">&ndash;</span> followers <span id="gh-last" class="now-last"></span></p>
+        </aside>
+      </div>
+
+      <div class="programs" aria-label="Programs, platforms and certifications">
+        <p class="programs-label">Programs, platforms and certifications</p>
+        <div class="marquee"><ul class="marquee-track"><li><span class="m-logo" data-logo="microsoft" aria-hidden="true"></span><span>Microsoft Learn</span></li><li><span class="m-logo" data-logo="geeksforgeeks" aria-hidden="true"></span><span>GeeksforGeeks</span></li><li><span class="m-logo" data-logo="google" aria-hidden="true"></span><span>Google</span></li><li><span class="m-logo" data-logo="kaggle" aria-hidden="true"></span><span>Kaggle</span></li><li><span class="m-logo" data-logo="aws" aria-hidden="true"></span><span>AWS</span></li><li><span class="m-logo" data-logo="github" aria-hidden="true"></span><span>GitHub</span></li><li><span class="m-logo" data-logo="tata" aria-hidden="true"></span><span>Tata</span></li><li><span class="m-logo" data-logo="unstop" aria-hidden="true"></span><span>Unstop</span></li><li><span class="m-logo" data-logo="microsoft" aria-hidden="true"></span><span>Microsoft Learn</span></li><li><span class="m-logo" data-logo="geeksforgeeks" aria-hidden="true"></span><span>GeeksforGeeks</span></li><li><span class="m-logo" data-logo="google" aria-hidden="true"></span><span>Google</span></li><li><span class="m-logo" data-logo="kaggle" aria-hidden="true"></span><span>Kaggle</span></li><li><span class="m-logo" data-logo="aws" aria-hidden="true"></span><span>AWS</span></li><li><span class="m-logo" data-logo="github" aria-hidden="true"></span><span>GitHub</span></li><li><span class="m-logo" data-logo="tata" aria-hidden="true"></span><span>Tata</span></li><li><span class="m-logo" data-logo="unstop" aria-hidden="true"></span><span>Unstop</span></li></ul></div>
+      </div>
+    </section>
+
+    <div class="trace" aria-hidden="true"><i></i></div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="chapter" aria-hidden="true" data-parallax="0.12">01</span>
+          <h2 id="about-title" class="section-title" data-split-scroll>About</h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p class="about-lead">Curiosity about how scalable software works led me to learn by building real-world solutions.</p>
+            <p>From hackathon arenas to founding the Akatsuki Tech Clan and leading nationwide campus developer communities, I work at the intersection of cloud platforms and generative AI agents.</p>
+            <p>Through the Akatsuki Tech Clan and the GeeksforGeeks student chapter, I train peers to ship quickly under competitive pressure.</p>
+            <ul class="stats" aria-label="Highlights">
+              <li class="card stat"><span class="stat-num"><b data-count="5">5</b>&times;</span><span>Hackathon finalist</span></li>
+              <li class="card stat"><span class="stat-num"><b data-count="1">1</b>st</span><span>Technophilia 2k26</span></li>
+              <li class="card stat"><span class="stat-num"><b data-count="3">3</b>+</span><span>Workshops organized</span></li>
+              <li class="card stat"><span class="stat-num"><b data-count="50">50</b>+</span><span>DSA problems solved</span></li>
+            </ul>
+          </div>
+          <div class="facts">
+            <div class="card fact"><h3>Education</h3><p>B.Tech in Computer Science &amp; Engineering, 2nd year<br>Dewan VS Institute of Engineering and Technology, affiliated with Dr. A.P.J. Abdul Kalam Technical University (AKTU)<br>2025 &ndash; 2029</p></div>
+            <div class="card fact"><h3>Coursework</h3><p>Data Structures, Algorithms, Web Development, Software Engineering, Operating Systems, Database Management Systems, Computer Networks</p></div>
+            <div class="card fact"><h3>Aiming for</h3><p>Software engineering in cloud and platform engineering, and AI-powered scalable systems</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trace" aria-hidden="true"><i></i></div>
+
+    <!-- LEADERSHIP -->
+    <section id="leadership" class="section" aria-labelledby="leadership-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="chapter" aria-hidden="true" data-parallax="0.12">02</span>
+          <h2 id="leadership-title" class="section-title" data-split-scroll>Leadership &amp; experience</h2>
+        <p class="section-intro">Running student developer communities, mentoring teams for hackathons, and learning in industry settings.</p>
+        </header>
+        <ol class="timeline"><li class="card role">
+            <div class="role-top"><span class="card-logo" data-logo="microsoft" aria-hidden="true"></span><time>Oct 2026 &ndash; present</time></div>
+            <h3>Microsoft Learn Student Ambassador</h3>
+            <p class="org">Microsoft Learn Community</p>
+            <p>Exploring AI, Azure and M365 Copilot, and helping campus developers learn through technical workshops.</p>
+          </li><li class="card role">
+            <div class="role-top"><span class="card-logo" data-logo="none" data-mono="IN" aria-hidden="true"></span><time>Jul 2026</time></div>
+            <h3>Cyber Security Analyst Intern</h3>
+            <p class="org">Infotact Solutions</p>
+            <p>Internship focused on cyber security analysis.</p>
+          </li><li class="card role">
+            <div class="role-top"><span class="card-logo" data-logo="none" data-mono="DI" aria-hidden="true"></span><time>Jun 2026 &ndash; present</time></div>
+            <h3>President</h3>
+            <p class="org">Dewan Innovation &amp; Incubation Forum</p>
+            <p>Leading club administration and organizing hackathons and incubation pitch events for engineering students.</p>
+          </li><li class="card role">
+            <div class="role-top"><span class="card-logo" data-logo="github" aria-hidden="true"></span><time>Apr &ndash; Jun 2026</time></div>
+            <h3>Open-Source Contributor</h3>
+            <p class="org">Nexus Spring of Code</p>
+            <p>Contributed to open-source projects during the Nexus Spring of Code program.</p>
+          </li><li class="card role">
+            <div class="role-top"><span class="card-logo" data-logo="geeksforgeeks" aria-hidden="true"></span><time>Jan 2026 &ndash; present</time></div>
+            <h3>Founder &amp; President (Campus Ambassador)</h3>
+            <p class="org">GeeksforGeeks Student Chapter</p>
+            <p>Organizing workshops and coding contests, managing the community, leading events, and mentoring students on campus.</p>
+          </li><li class="card role">
+            <div class="role-top"><span class="card-logo" data-logo="none" data-mono="AK" aria-hidden="true"></span><time>Founded 2026</time></div>
+            <h3>Founder &amp; Team Lead</h3>
+            <p class="org">Akatsuki Tech Clan</p>
+            <p>An unofficial college tech clan that prepares juniors for 24-hour and 36-hour hackathons: rapid full-stack prototyping, Git collaboration, idea validation and pitching.</p>
+          </li></ol>
+      </div>
+    </section>
+
+    <div class="trace" aria-hidden="true"><i></i></div>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="chapter" aria-hidden="true" data-parallax="0.12">03</span>
+          <h2 id="projects-title" class="section-title" data-split-scroll>Projects</h2>
+        <p class="section-intro">A hackathon winner, a security tool, platforms for real-world problems, and a DevSecOps project in the planning stage.</p>
+        </header>
+
+        <article class="feature" data-tilt>
+          <div class="feature-main">
+            <p class="feature-kicker">Technophilia 2k26 &middot; 1st place</p>
+            <h3>DevRank</h3>
+            <p class="feature-sub">AI-powered career intelligence and hackathon success prediction platform</p>
+            <p>Students rarely have one place to show verified skills, projects and hackathon profiles. DevRank brings them together and uses the Gemini API to help teams and individuals understand where they stand.</p>
+            <ul class="tags" aria-label="Technologies"><li data-tech="react">React</li><li data-tech="node">Node.js</li><li data-tech="express">Express</li><li data-tech="mongodb">MongoDB</li><li data-tech="gemini">Gemini API</li><li data-tech="jwt">JWT</li></ul>
+            <div class="feature-links">
+              <button type="button" class="btn btn-outline btn-sm" disabled>Live demo coming soon</button>
+              <span class="feature-note">Repository is private for now.</span>
+            </div>
+          </div>
+          <ul class="feature-list">
+            <li><strong>AI Hackathon Predictor</strong> Estimates how well a team is set up for a hackathon.</li>
+            <li><strong>DigiVault</strong> A home for certificates and proof of work.</li>
+            <li><strong>Team Matcher</strong> Pairs students with teammates who fit the project.</li>
+            <li><strong>Leaderboards</strong> Shows progress across projects and problem solving.</li>
+          </ul>
+        </article>
+
+        <ul class="project-grid"><li class="card project">
+            <div class="project-top"><h3>Rakshak</h3><span class="status ">Open-source contribution</span></div>
+            <p>A VS Code extension that spots insecure code as you type, including SQL injection, XSS, weak cryptography, hardcoded secrets, command injection and path traversal. &ldquo;Rakshak&rdquo; means protector in Sanskrit.</p>
+            <ul class="tags"><li data-tech="vscode">VS Code API</li><li data-tech="typescript">TypeScript</li><li>AST analysis</li><li>OWASP Top 10</li></ul>
+          </li><li class="card project">
+            <div class="project-top"><h3>MindSet X</h3><span class="status status-live">In development</span></div>
+            <p>An AI healthcare triage assistant that analyzes symptoms, gives preliminary guidance and suggests next steps before a visit to a professional.</p>
+            <ul class="tags"><li data-tech="nextjs">Next.js</li><li data-tech="typescript">TypeScript</li><li data-tech="node">Node.js</li><li data-tech="mongodb">MongoDB</li><li data-tech="gemini">Gemini API</li></ul>
+          </li><li class="card project">
+            <div class="project-top"><h3>Resource Exchange Platform</h3><span class="status ">Completed</span></div>
+            <p>Connects farmers with surplus produce to NGOs and organizations, so food gets redistributed instead of wasted. Includes farmer and NGO registration, food listings and request management.</p>
+            <ul class="tags"><li data-tech="html">HTML</li><li data-tech="css">CSS</li><li data-tech="javascript">JavaScript</li></ul>
+          </li><li class="card project">
+            <div class="project-top"><h3>AI Disease Detection Assistant</h3><span class="status ">Completed</span></div>
+            <p>Predicts likely conditions from symptoms to make basic healthcare guidance more accessible.</p>
+            <ul class="tags"><li data-tech="react">React</li><li data-tech="node">Node.js</li><li>Machine learning</li></ul>
+          </li></ul>
+
+        <article id="secureflow" class="feature sf" data-status="planned" aria-labelledby="sf-title">
+          <div class="sf-intro">
+            <p class="feature-kicker">DevSecOps &middot; B.Tech final-year project &middot; PRD v2.0, planned MVP</p>
+            <h3 id="sf-title">SecureFlow</h3>
+            <p class="feature-sub">Scan every pull request. Get a prioritized security report before code is merged.</p>
+            <p>SecureFlow connects to a GitHub repository, runs Trivy (dependency vulnerabilities) and Gitleaks (exposed secrets) when code changes, and shows developers what to fix first. It orchestrates established scanners rather than inventing a new detection engine.</p>
+          </div>
+
+          <ol class="sf-pipeline" aria-label="Scan pipeline stages">
+            <li class="sf-node" data-stage="webhook"><span class="sf-dot" aria-hidden="true"></span><strong>Webhook</strong><span>GitHub PR event</span></li>
+            <li class="sf-node" data-stage="verify"><span class="sf-dot" aria-hidden="true"></span><strong>Verify</strong><span>HMAC and dedupe</span></li>
+            <li class="sf-node" data-stage="queue"><span class="sf-dot" aria-hidden="true"></span><strong>Queue</strong><span>Celery and Redis</span></li>
+            <li class="sf-node" data-stage="scan"><span class="sf-dot" aria-hidden="true"></span><strong>Scan</strong><span>Trivy and Gitleaks</span></li>
+            <li class="sf-node" data-stage="normalize"><span class="sf-dot" aria-hidden="true"></span><strong>Normalize</strong><span>Redact and dedupe</span></li>
+            <li class="sf-node" data-stage="report"><span class="sf-dot" aria-hidden="true"></span><strong>Report</strong><span>Dashboard and check</span></li>
+          </ol>
+
+          <div class="sf-console">
+            <div class="sf-console-bar">
+              <span>Simulated scan of a pull request</span>
+              <div class="sf-controls">
+                <div class="sf-scenario" role="group" aria-label="Pull request to scan">
+                  <button type="button" class="sf-chip" data-scenario="leaky" aria-pressed="true">Leaky PR</button>
+                  <button type="button" class="sf-chip" data-scenario="fixed" aria-pressed="false">Fixed PR</button>
+                </div>
+                <button type="button" id="sf-run" class="btn btn-solid btn-sm"><span id="sf-run-label">Run simulated scan</span></button>
+              </div>
+            </div>
+            <div id="sf-log" class="sf-log" aria-hidden="true"><span class="sf-idle">Press &ldquo;Run simulated scan&rdquo; to follow a pull request through the pipeline.</span></div>
+            <div id="sf-result" class="sf-result" hidden>
+              <p class="sf-counts">
+                <span class="sev sev-critical"><b id="sf-c-critical">0</b> Critical</span>
+                <span class="sev sev-high"><b id="sf-c-high">0</b> High</span>
+                <span class="sev sev-medium"><b id="sf-c-medium">0</b> Medium</span>
+                <span id="sf-verdict" class="sf-verdict">Merge blocked</span>
+              </p>
+              <ul id="sf-findings" class="sf-findings"></ul>
+            </div>
+            <p id="sf-status" class="sr-only" role="status"></p>
+          </div>
+
+          <ul class="sf-principles">
+            <li><svg data-lucide="shield-check" aria-hidden="true"></svg><span><strong>Verified webhooks.</strong> HMAC signature checked on the raw request body, with delivery-ID idempotency.</span></li>
+            <li><svg data-lucide="lock" aria-hidden="true"></svg><span><strong>Untrusted by default.</strong> Non-root worker, no repository code executed, temporary files always cleaned up.</span></li>
+            <li><svg data-lucide="shield" aria-hidden="true"></svg><span><strong>Secrets stay hidden.</strong> Redacted from logs, storage and UI. Every query is scoped to a workspace.</span></li>
+          </ul>
+
+          <div class="sf-foot">
+            <ul class="tags"><li data-tech="fastapi">FastAPI</li><li data-tech="celery">Celery</li><li data-tech="redis">Redis</li><li data-tech="mongodb">MongoDB</li><li data-tech="trivy">Trivy</li><li>Gitleaks</li><li data-tech="react">React</li><li data-tech="typescript">TypeScript</li><li data-tech="docker">Docker</li></ul>
+            <p class="feature-note">The demo is a simulation with seeded data and a dummy credential. SecureFlow is at the PRD stage, with implementation planned over six months.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="trace" aria-hidden="true"><i></i></div>
+
+    <!-- STACK -->
+    <section id="stack" class="section" aria-labelledby="stack-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="chapter" aria-hidden="true" data-parallax="0.12">04</span>
+          <h2 id="stack-title" class="section-title" data-split-scroll>Tech stack</h2>
+        <p class="section-intro">How I build, drawn the way a cloud engineer would: the DevOps lifecycle, then my stack as an architecture of client, API, data and AI, delivery and cloud.</p>
+        </header>
+
+        <ol class="lifecycle" aria-label="DevOps lifecycle and where my tools fit"><li class="lc" style="--n:0"><svg data-lucide="clipboard-list" aria-hidden="true"></svg><strong>Plan</strong><span>Figma</span></li><li class="lc" style="--n:1"><svg data-lucide="code" aria-hidden="true"></svg><strong>Code</strong><span>VS Code, Git</span></li><li class="lc" style="--n:2"><svg data-lucide="hammer" aria-hidden="true"></svg><strong>Build</strong><span>Docker (learning)</span></li><li class="lc" style="--n:3"><svg data-lucide="flask-conical" aria-hidden="true"></svg><strong>Test</strong><span>Postman</span></li><li class="lc" style="--n:4"><svg data-lucide="package" aria-hidden="true"></svg><strong>Release</strong><span>GitHub</span></li><li class="lc" style="--n:5"><svg data-lucide="rocket" aria-hidden="true"></svg><strong>Deploy</strong><span>Azure, AWS (learning), Firebase</span></li><li class="lc" style="--n:6"><svg data-lucide="server" aria-hidden="true"></svg><strong>Operate</strong><span>Linux</span></li><li class="lc" style="--n:7"><svg data-lucide="activity" aria-hidden="true"></svg><strong>Monitor</strong><span>on the roadmap</span></li></ol>
+
+        <div class="flow" role="group" aria-label="Architecture diagram of my tech stack">
+          <div class="tier ">
+            <span class="tier-label">Client</span>
+            <ul class="tiles"><li class="tile"><span class="tile-logo" data-logo="react" aria-hidden="true"></span><span class="tile-name">React</span></li><li class="tile"><span class="tile-logo" data-logo="nextjs" aria-hidden="true"></span><span class="tile-name">Next.js</span></li><li class="tile"><span class="tile-logo" data-logo="tailwind" aria-hidden="true"></span><span class="tile-name">Tailwind CSS</span></li><li class="tile"><span class="tile-logo" data-logo="typescript" aria-hidden="true"></span><span class="tile-name">TypeScript</span></li></ul>
+          </div>
+          <span class="flow-link" aria-hidden="true"></span>
+          <div class="tier ">
+            <span class="tier-label">API</span>
+            <ul class="tiles"><li class="tile"><span class="tile-logo" data-logo="node" aria-hidden="true"></span><span class="tile-name">Node.js</span></li><li class="tile"><span class="tile-logo" data-logo="express" aria-hidden="true"></span><span class="tile-name">Express</span></li><li class="tile"><span class="tile-logo" data-logo="jwt" aria-hidden="true"></span><span class="tile-name">JWT auth</span></li></ul>
+          </div>
+          <span class="flow-link" aria-hidden="true"></span>
+          <div class="tier ">
+            <span class="tier-label">Data &amp; AI</span>
+            <ul class="tiles"><li class="tile"><span class="tile-logo" data-logo="mongodb" aria-hidden="true"></span><span class="tile-name">MongoDB</span></li><li class="tile"><span class="tile-logo" data-logo="mysql" aria-hidden="true"></span><span class="tile-name">MySQL</span></li><li class="tile"><span class="tile-logo" data-logo="gemini" aria-hidden="true"></span><span class="tile-name">Gemini API</span></li></ul>
+          </div>
+          <span class="flow-link" aria-hidden="true"></span>
+          <div class="tier ">
+            <span class="tier-label">Delivery</span>
+            <ul class="tiles"><li class="tile"><span class="tile-logo" data-logo="git" aria-hidden="true"></span><span class="tile-name">Git</span></li><li class="tile"><span class="tile-logo" data-logo="github" aria-hidden="true"></span><span class="tile-name">GitHub</span></li><li class="tile"><span class="tile-logo" data-logo="docker" aria-hidden="true"></span><span class="tile-name">Docker</span><span class="badge-learning">learning</span></li><li class="tile"><span class="tile-logo" data-logo="linux" aria-hidden="true"></span><span class="tile-name">Linux</span></li></ul>
+          </div>
+          <span class="flow-link" aria-hidden="true"></span>
+          <div class="tier tier-cloud">
+            <span class="tier-label">Cloud</span>
+            <ul class="tiles"><li class="tile"><span class="tile-logo" data-logo="azure" aria-hidden="true"></span><span class="tile-name">Microsoft Azure</span><span class="badge-learning">learning</span></li><li class="tile"><span class="tile-logo" data-logo="aws" aria-hidden="true"></span><span class="tile-name">AWS</span><span class="badge-learning">learning</span></li><li class="tile"><span class="tile-logo" data-logo="firebase" aria-hidden="true"></span><span class="tile-name">Firebase</span></li></ul>
+          </div>
+        </div>
+
+        <h3 class="sub-title">Also in my toolbox</h3>
+        <ul class="toolbox"><li class="tile"><span class="tile-logo" data-logo="python" aria-hidden="true"></span><span class="tile-name">Python</span></li><li class="tile"><span class="tile-logo" data-logo="javascript" aria-hidden="true"></span><span class="tile-name">JavaScript</span></li><li class="tile"><span class="tile-logo" data-logo="c" aria-hidden="true"></span><span class="tile-name">C</span></li><li class="tile"><span class="tile-logo" data-logo="none" data-mono="SQL" aria-hidden="true"></span><span class="tile-name">SQL</span></li><li class="tile"><span class="tile-logo" data-logo="html" aria-hidden="true"></span><span class="tile-name">HTML</span></li><li class="tile"><span class="tile-logo" data-logo="css" aria-hidden="true"></span><span class="tile-name">CSS</span></li><li class="tile"><span class="tile-logo" data-logo="framer" aria-hidden="true"></span><span class="tile-name">Framer Motion</span></li><li class="tile"><span class="tile-logo" data-logo="gsap" aria-hidden="true"></span><span class="tile-name">GSAP</span></li><li class="tile"><span class="tile-logo" data-logo="threejs" aria-hidden="true"></span><span class="tile-name">Three.js</span></li><li class="tile"><span class="tile-logo" data-logo="axios" aria-hidden="true"></span><span class="tile-name">Axios</span></li><li class="tile"><span class="tile-logo" data-logo="mongodb" aria-hidden="true"></span><span class="tile-name">MongoDB Atlas</span></li><li class="tile"><span class="tile-logo" data-logo="vscode" aria-hidden="true"></span><span class="tile-name">VS Code</span></li><li class="tile"><span class="tile-logo" data-logo="postman" aria-hidden="true"></span><span class="tile-name">Postman</span></li><li class="tile"><span class="tile-logo" data-logo="figma" aria-hidden="true"></span><span class="tile-name">Figma</span></li><li class="tile"><span class="tile-logo" data-logo="canva" data-mono="Ca" aria-hidden="true"></span><span class="tile-name">Canva</span></li><li class="tile"><span class="tile-logo" data-logo="kaggle" aria-hidden="true"></span><span class="tile-name">AI agents (Kaggle)</span></li></ul>
+      </div>
+    </section>
+
+    <div class="trace" aria-hidden="true"><i></i></div>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="section" aria-labelledby="achievements-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="chapter" aria-hidden="true" data-parallax="0.12">05</span>
+          <h2 id="achievements-title" class="section-title" data-split-scroll>Achievements</h2>
+        <p class="section-intro">Hackathons and competitions, where I learned to build, align a team and pitch under pressure.</p>
+        </header>
+        <ul class="card-grid"><li class="card ach">
+            <span class="pill pill-first">1st place</span>
+            <h3>Technophilia 2k26</h3>
+            <p>DevRank &middot; Dewan VS Group of Institutions</p>
+            <span class="ach-year">2026</span>
+          </li><li class="card ach">
+            <span class="pill pill-blue">Runner-up</span>
+            <h3>HackShastra 24-hour hackathon</h3>
+            <p>Subharti University</p>
+            <span class="ach-year">2026</span>
+          </li><li class="card ach">
+            <span class="pill pill-plain">Finalist</span>
+            <h3>AI Impact Summit Buildathon</h3>
+            <p>AI track</p>
+            <span class="ach-year"></span>
+          </li><li class="card ach">
+            <span class="pill pill-plain">Finalist</span>
+            <h3>Grand Hack IPEC</h3>
+            <p>IPEC Ghaziabad</p>
+            <span class="ach-year"></span>
+          </li><li class="card ach">
+            <span class="pill pill-plain">Finalist</span>
+            <h3>CODEFUSION 2K26</h3>
+            <p>CodeVerse</p>
+            <span class="ach-year">2026</span>
+          </li><li class="card ach">
+            <span class="pill pill-plain">Team leader</span>
+            <h3>National Entrepreneurship Challenge</h3>
+            <p>IIT Bombay</p>
+            <span class="ach-year"></span>
+          </li><li class="card ach">
+            <span class="pill pill-plain">Participant</span>
+            <h3>ECWoC, Hacktoberfest and GTA MegaJam</h3>
+            <p>Open source and game jam</p>
+            <span class="ach-year"></span>
+          </li></ul>
+      </div>
+    </section>
+
+    <div class="trace" aria-hidden="true"><i></i></div>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section" aria-labelledby="certifications-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="chapter" aria-hidden="true" data-parallax="0.12">06</span>
+          <h2 id="certifications-title" class="section-title" data-split-scroll>Certificates</h2>
+        </header>
+        <ul class="card-grid card-grid-3"><li class="card cert">
+            <div class="cert-top"><span class="card-logo" data-logo="microsoft" aria-hidden="true"></span><span class="cert-issuer">Microsoft</span></div>
+            <h3>Applied Skills: Generate reports with AI research agents</h3>
+            <p class="cert-date">Aug 2026</p>
+          </li><li class="card cert">
+            <div class="cert-top"><span class="card-logo" data-logo="kaggle" aria-hidden="true"></span><span class="cert-issuer">Kaggle &amp; Google</span></div>
+            <h3>5-Day AI Agents Intensive Course</h3>
+            <p class="cert-date">Dec 2025</p>
+          </li><li class="card cert">
+            <div class="cert-top"><span class="card-logo" data-logo="tata" aria-hidden="true"></span><span class="cert-issuer">Tata</span></div>
+            <h3>GenAI Powered Data Analytics job simulation</h3>
+            <p class="cert-date">Oct 2025</p>
+          </li><li class="card cert">
+            <div class="cert-top"><span class="card-logo" data-logo="aws" aria-hidden="true"></span><span class="cert-issuer">AWS</span></div>
+            <h3>Solutions Architecture job simulation</h3>
+            <p class="cert-date">Oct 2025</p>
+          </li><li class="card cert">
+            <div class="cert-top"><span class="card-logo" data-logo="geeksforgeeks" aria-hidden="true"></span><span class="cert-issuer">GeeksforGeeks</span></div>
+            <h3>Prompt Engineering Masterclass</h3>
+            <p class="cert-date"></p>
+          </li><li class="card cert">
+            <div class="cert-top"><span class="card-logo" data-logo="unstop" aria-hidden="true"></span><span class="cert-issuer">Unstop</span></div>
+            <h3>Google Gemini QuizOff</h3>
+            <p class="cert-date"></p>
+          </li></ul>
+      </div>
+    </section>
+
+    <div class="trace" aria-hidden="true"><i></i></div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <header class="section-head">
+          <span class="chapter" aria-hidden="true" data-parallax="0.12">07</span>
+          <h2 id="contact-title" class="section-title" data-split-scroll>Let&rsquo;s build together</h2>
+        <p class="section-intro">Open to internships and collaborations. If you need a builder who can ship and lead student cohorts, write to me.</p>
+        </header>
+          <ul class="contact-links">
+            <li><a class="card contact-card" href="mailto:devarjun876@gmail.com"><svg data-lucide="mail" aria-hidden="true"></svg><span>devarjun876@gmail.com</span></a></li>
+            <li><a class="card contact-card" href="tel:+919084840296"><svg data-lucide="phone" aria-hidden="true"></svg><span>+91 9084840296</span></a></li>
+            <li><a class="card contact-card" href="https://www.linkedin.com/in/devarjun-bhardwaj-41b677373" target="_blank" rel="noopener noreferrer"><svg data-lucide="linkedin" aria-hidden="true"></svg><span>linkedin.com/in/devarjun-bhardwaj</span></a></li>
+            <li><a class="card contact-card" href="https://github.com/devarjun345" target="_blank" rel="noopener noreferrer"><svg data-lucide="github" aria-hidden="true"></svg><span>github.com/devarjun345</span></a></li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="card contact-form" novalidate>
+          <div class="field"><label for="cf-name">Your name</label><input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="80"></div>
+          <div class="field"><label for="cf-email">Your email</label><input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="120"></div>
+          <div class="field"><label for="cf-message">Message</label><textarea id="cf-message" name="message" rows="5" required maxlength="1000"></textarea></div>
+          <button type="submit" class="btn btn-solid">Open email draft</button>
+          <p id="form-status" class="form-status sr-only" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="trace" aria-hidden="true"><i></i></div>
+    <div class="container footer-inner">
+      <p class="footer-motto">Learn by building. Then help others build.</p>
+      <p class="footer-meta">Devarjun Bhardwaj &middot; Meerut, India &middot; 2026 &middot; built with Vite and three.js</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
