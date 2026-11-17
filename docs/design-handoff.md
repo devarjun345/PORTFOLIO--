@@ -51,6 +51,21 @@ Palette tokens: `--c-cyan`, `--c-violet`, `--c-pink`, `--c-orange`, `--c-green`,
 
 **Reduced motion.** The spectrum border stops turning and the backdrop draws a still frame; colours themselves stay.
 
+## Legibility and dark theme (readability update)
+
+Problem found on real GPUs: the WebGL haze, bloom and anamorphic streak rendered much brighter than expected, so light body text sat on a pale blue wash and was unreadable (worst on phones). The fix is layered so no single layer can break legibility again:
+
+1. **Quieter scene.** Haze, horizon glow, grid, network links, bloom and the light streak were all turned down (haze to roughly a third, bloom threshold raised so only real highlights glow). The reactor ring, coils and core were given their glow back, since they sit away from the text.
+2. **Dimming.** The scene is dimmed after the hero (down to 0.57 on desktop) and, on screens under 768px, it is dimmer and fainter overall.
+3. **Scrim.** A fixed `.scrim` layer sits between the canvas and the page: 34 to 58% black on desktop, 42 to 70% on phones. It guarantees a dark base whatever the GPU draws.
+4. **Brighter text.** `--bone-dim` moved from #a9b4c9 to #cdd6e8 and `--muted` from #7886a0 to #9aa7c0. Hero lead, intros and About copy use #d6deee. Text that sits directly on the backdrop also gets a soft dark halo (`text-shadow`), and section titles and the hero name get a dark drop shadow.
+5. **Solid surfaces.** Cards, tiles, lifecycle steps, form fields and the terminal tagline are 88 to 95% opaque.
+6. **Quieter colour washes.** Section washes are about 7% opacity and fade out at section edges (no seam).
+
+**Measured result** (rendered page, text hidden and the background behind it sampled; contrast of the text colour against the brightest 10% of pixels behind it): desktop 11.0 to 12.7, phone 11.0 to 12.7. WCAG AA needs 4.5. Isolated bright particles can locally dip lower; they are a few pixels wide.
+
+If you want the scene brighter again, raise the scrim's transparency in `.scrim` first, then the `uDim` values in `src/modules/atmosphere.js`. Re-check contrast after any change.
+
 ## Layout
 
 | Item | Spec |

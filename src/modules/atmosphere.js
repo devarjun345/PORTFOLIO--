@@ -64,9 +64,9 @@ const BACKDROP_FRAG = /* glsl */ `
     vec2 c = vec2(uAspect * .55 + uMouse.x * .1, .05);
     float n = fbm(p * 1.1 + vec2(uTime * .02, -uTime * .015));
     float d = length((p - c) * vec2(1., 1.35));
-    vec3 haze = mix(mix(vec3(.12, .09, .42), vec3(.04, .32, .5), n), uTint * .6, .3) * exp(-d * 1.15) * n * 1.6;
-    vec3 haze2 = pal(.3 + uTime * .012) * exp(-length((p - vec2(-uAspect * .55, -.15)) * vec2(1., 1.3)) * 1.25) * fbm(p * 1.3 + 7. + uTime * .02) * .6;
-    vec3 haze3 = pal(.75 + uTime * .01) * exp(-length((p - vec2(uAspect * .05, .75)) * vec2(.9, 1.5)) * 1.4) * fbm(p * 1.5 + 3. - uTime * .015) * .45;
+    vec3 haze = mix(mix(vec3(.12, .09, .42), vec3(.04, .32, .5), n), uTint * .5, .3) * exp(-d * 1.15) * n * .8;
+    vec3 haze2 = pal(.3 + uTime * .012) * exp(-length((p - vec2(-uAspect * .55, -.15)) * vec2(1., 1.3)) * 1.25) * fbm(p * 1.3 + 7. + uTime * .02) * .22;
+    vec3 haze3 = pal(.75 + uTime * .01) * exp(-length((p - vec2(uAspect * .05, .75)) * vec2(.9, 1.5)) * 1.4) * fbm(p * 1.5 + 3. - uTime * .015) * .16;
     haze += haze2 + haze3;
     haze *= .55 + uIgnite * .35 + uPulse * .6;
 
@@ -80,10 +80,10 @@ const BACKDROP_FRAG = /* glsl */ `
       vec2 f = abs(fract(gp) - .5);
       float line = smoothstep(.488, .5, max(f.x, f.y));
       float fade = smoothstep(.03, .24, fy) * (1. - smoothstep(.16, .4, fy) * .75);
-      col += mix(vec3(.1, .55, .75), uTint, .65) * line * fade * .55;
+      col += mix(vec3(.1, .55, .75), uTint, .65) * line * fade * .36;
       col += uTint * fade * .04;
     }
-    col += mix(vec3(.25, .45, 1.), uTint, .7) * exp(-abs(fy) * 45.) * .22 * (.7 + uIgnite * .3);
+    col += mix(vec3(.25, .45, 1.), uTint, .7) * exp(-abs(fy) * 45.) * .12 * (.7 + uIgnite * .3);
     gl_FragColor = vec4(col, 1.);
   }
 `;
@@ -120,7 +120,7 @@ const PLASMA_VERT = /* glsl */ `
     vec3 inner = mix(pal(aP.x / 6.28318 + .5 + uTime * .02), vec3(.8, .97, 1.), .3);
     vCol = mix(outer, inner, heat);
     vCol = mix(vCol, vec3(.85, 1., 1.), heat * heat * uIgnite * .45);
-    vA = (.22 + .6 * heat) * (.6 + .4 * uIgnite) * uFade;
+    vA = (.34 + 1.0 * heat) * (.65 + .45 * uIgnite) * uFade;
   }
 `;
 
@@ -152,7 +152,7 @@ const LINK_VERT = /* glsl */ `
   void main(){
     vec3 p = disp(position, aDir, aSeed, uSplit, uTime);
     gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.);
-    vA = uSplit * uSplit * .7;
+    vA = uSplit * uSplit * .42;
   }
 `;
 const LINK_FRAG = /* glsl */ `uniform vec3 uTint; varying float vA; void main(){ vec3 c = mix(vec3(.4, .85, 1.), uTint, .7); gl_FragColor = vec4(c * vA, vA); }`;
@@ -218,9 +218,9 @@ const GRADE = {
       for (int i = -6; i <= 6; i++) {
         vec3 s = texture2D(tDiffuse, vUv + vec2(float(i) * .012, 0.)).rgb;
         float l = max(max(s.r, s.g), s.b);
-        streak += max(vec3(l - .86), 0.) * (1. - abs(float(i)) / 7.);
+        streak += max(vec3(l - .92), 0.) * (1. - abs(float(i)) / 7.);
       }
-      col += streak * vec3(.3, .6, 1.) * .28;
+      col += streak * vec3(.3, .6, 1.) * .16;
       col *= uDim;
       float vig = smoothstep(.95, .18, length(c) * 1.2);
       col *= mix(.45, 1., vig);
@@ -236,6 +236,7 @@ export function initAtmosphere() {
   const canvas = document.getElementById('atmosphere');
   if (!canvas) return;
 
+  const small = window.innerWidth < 768;
   const lite = window.innerWidth < 768 || (navigator.deviceMemory && navigator.deviceMemory <= 4);
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' });
   renderer.setClearColor(0x05070d, 1);
@@ -288,7 +289,7 @@ export function initAtmosphere() {
   plasmaGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(PN * 3), 3));
   plasmaGeo.setAttribute('aP', new THREE.BufferAttribute(pA, 4));
   const plasma = new THREE.Points(plasmaGeo, new THREE.ShaderMaterial({
-    uniforms: { uTime: U.uTime, uIgnite: U.uIgnite, uPulse: U.uPulse, uFade: U.uFade, uSize: { value: 55 * pixelRatio } },
+    uniforms: { uTime: U.uTime, uIgnite: U.uIgnite, uPulse: U.uPulse, uFade: U.uFade, uSize: { value: 70 * pixelRatio } },
     vertexShader: PLASMA_VERT, fragmentShader: GLOW_FRAG,
     transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
   }));
@@ -427,7 +428,7 @@ export function initAtmosphere() {
   // post-processing
   const composer = new EffectComposer(renderer);
   composer.addPass(new RenderPass(scene, camera));
-  const bloom = new UnrealBloomPass(new THREE.Vector2(256, 256), 0.85, 0.7, 0.1);
+  const bloom = new UnrealBloomPass(new THREE.Vector2(256, 256), 0.6, 0.6, 0.22);
   composer.addPass(bloom);
   composer.addPass(new OutputPass());
   const grade = new ShaderPass(GRADE);
@@ -487,7 +488,7 @@ export function initAtmosphere() {
     const breathing = ignite > 0.8 ? 0.94 + 0.06 * Math.sin(t * 3) : 1;
     U.uIgnite.value = ignite * breathing;
     U.uSplit.value = split;
-    U.uFade.value = 1 - 0.55 * smooth(0.9, 1.9, sy);
+    U.uFade.value = (small ? 0.75 : 1) * (1 - 0.55 * smooth(0.9, 1.9, sy));
 
     const wide = camera.aspect > 1.25;
     const homeX = wide ? 2.2 : 0;
@@ -499,13 +500,13 @@ export function initAtmosphere() {
     reactor.rotation.x = 1.05 + mouse.y * 0.12 + sy * 0.15;
     reactor.rotation.z = 0.18;
     reactor.rotation.y = t * 0.08 + window.scrollY * 0.0004;
-    coilMat.opacity = 0.28 + ignite * 0.3;
+    coilMat.opacity = 0.42 + ignite * 0.3;
 
     const pulse = U.uPulse.value * Math.exp(-dt * 2.6);
     U.uPulse.value = pulse < 0.003 ? 0 : pulse;
     grade.uniforms.uPulse.value = U.uPulse.value + ignite * 0.05;
-    grade.uniforms.uDim.value = 1 - 0.5 * smooth(0.25, 1.2, sy);
-    bloom.strength = 0.7 + U.uPulse.value * 1.2 + ignite * 0.12;
+    grade.uniforms.uDim.value = (small ? 0.82 : 0.95) - 0.38 * smooth(0.25, 1.1, sy);
+    bloom.strength = 0.55 + U.uPulse.value * 1.0 + ignite * 0.1;
 
     composer.render();
   }

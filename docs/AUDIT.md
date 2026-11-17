@@ -33,3 +33,10 @@
 - Added a per-section colour system (see `docs/design-handoff.md`, "Colour system"). The live accent is set on `<html>` by `initActiveNav` and mirrored into the WebGL backdrop through the `section:tint` event.
 - Fixed a race: the lazy-loaded backdrop could miss the first `section:tint` event, so it now reads the current `--accent-rgb` when it starts.
 - Verified in a browser: WebGL scene compiles with no shader errors, every section shows its own accent, reveals complete, no horizontal scroll at 390px, reduced motion shows all content.
+
+
+## Readability update
+
+- Text and backdrop had become the same brightness on real GPUs (reported on laptop and phone). Fixed with a quieter scene, a `.scrim` layer, brighter text tokens, text halos and near-opaque surfaces. See `docs/design-handoff.md`, "Legibility and dark theme".
+- Measured contrast of body text on the rendered page: 11.0 to 12.7 on desktop and on a 390px phone viewport.
+- Kept the deploy files from the uploaded project (`.git`, the Google Search Console verification file and `sitemap.xml`) untouched.

@@ -11,8 +11,8 @@
   --ink-3: #101827;
   --steel: #1a2540;
   --bone: #e9eef8;
-  --bone-dim: #a9b4c9;
-  --muted: #7886a0;
+  --bone-dim: #cdd6e8;
+  --muted: #9aa7c0;
   --ion: #22e4ff;
   --ion-soft: #7df0ff;
   --plasma: #7c6cf6;
@@ -630,3 +630,33 @@ kbd { padding: 0.22rem 0.4rem; border: 1px solid var(--line-strong); border-bott
 .feature { border: 1px solid transparent; background: linear-gradient(180deg, rgba(12, 19, 36, 0.96), rgba(7, 11, 21, 0.97)) padding-box, conic-gradient(from var(--a), var(--accent), var(--c-violet), var(--c-pink), var(--c-orange), var(--accent)) border-box; }
 @media (prefers-reduced-motion: no-preference) { .feature { animation: border-turn 9s linear infinite; } }
 @keyframes border-turn { to { --a: 360deg; } }
+
+/* ==========================================================================
+   Legibility: a dark theme that stays dark on every GPU and every screen
+   ========================================================================== */
+/* a scrim between the WebGL scene and the page, so text never sits on a bright haze */
+.scrim { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, rgba(5, 7, 13, 0.34) 0%, rgba(5, 7, 13, 0.5) 35%, rgba(5, 7, 13, 0.58) 100%); }
+@media (max-width: 767px) { .scrim { background: linear-gradient(180deg, rgba(5, 7, 13, 0.42) 0%, rgba(5, 7, 13, 0.6) 40%, rgba(5, 7, 13, 0.7) 100%); } }
+
+/* text that sits directly on the backdrop gets a soft dark halo and full-strength colour */
+.hero-lead, .hero-roles li, .section-intro, .about-copy p, .about-lead, .now-strip, .programs-label, .feature-note, .footer-meta, .footer-motto, .hero-kicker { text-shadow: 0 1px 2px rgba(5, 7, 13, 0.9), 0 0 18px rgba(5, 7, 13, 0.85); }
+.hero-lead, .section-intro, .about-copy p { color: #d6deee; }
+.hero-roles li { color: #cdd6e8; }
+.section-title { text-shadow: none; filter: drop-shadow(0 2px 14px rgba(5, 7, 13, 0.85)); }
+.hero-name { filter: drop-shadow(0 4px 22px rgba(5, 7, 13, 0.75)); }
+
+/* surfaces: cards and panels are close to opaque so their text is always readable */
+.card { background: linear-gradient(180deg, rgba(13, 20, 36, 0.93), rgba(8, 12, 22, 0.95)); }
+.hero-tag { background: rgba(5, 7, 13, 0.82); }
+.tile { background: rgba(8, 12, 22, 0.92); }
+.tier { background-color: rgba(8, 12, 22, 0.72); background-image: linear-gradient(rgba(var(--accent-rgb), 0.06), rgba(var(--accent-rgb), 0.06)); }
+.lc { background: rgba(8, 12, 22, 0.9); }
+.field input, .field textarea { background: rgba(5, 7, 13, 0.88); }
+.btn-outline { background: rgba(5, 7, 13, 0.7); }
+
+/* the colour washes behind sections are quieter */
+.section::before { background: radial-gradient(42rem 28rem at 92% 8%, rgba(var(--accent-rgb), 0.07), transparent 70%), radial-gradient(30rem 22rem at 4% 92%, rgba(var(--accent-rgb), 0.04), transparent 70%); }
+#leadership::before, #stack::before, #certifications::before { background: radial-gradient(42rem 28rem at 8% 10%, rgba(var(--accent-rgb), 0.07), transparent 70%), radial-gradient(30rem 22rem at 96% 90%, rgba(var(--accent-rgb), 0.04), transparent 70%); }
+
+/* fade each wash out at the section edges so no seam shows between sections */
+.section::before { -webkit-mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent); mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent); }
